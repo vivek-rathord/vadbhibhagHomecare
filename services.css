@@ -1,0 +1,667 @@
+:root {
+    --orange-color: #F75801;
+    --black-color: #111111;
+    --accent-color: #FFFF21;
+    --white-color: white;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* top-header */
+.top-header {
+    width: 100%;
+    height: 5vh;
+    color: var(--white-color);
+    background-color: var(--black-color);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    /* position: fixed; */
+    /* top: 3px; */
+}
+
+.icon-wrapper,
+.gmail-wrapper {
+    display: flex;
+    width: 320px;
+    height: 20px;
+    letter-spacing: 1px;
+}
+
+.icons-wrapper {
+    width: 100px;
+}
+
+.top-header i {
+    margin-right: 10px;
+}
+
+@media(max-width:448px) {
+    .top-header {
+        display: none;
+    }
+}
+
+/* nav-section */
+.nav-section {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 190px;
+    /* position: fixed; */
+    background-color: var(--white-color);
+    /* top: 10px; */
+}
+
+.logo img {
+    width: 20vw;
+    height: auto;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    padding-right: 40px;
+}
+
+.nav-links a {
+    color: black;
+    font-size: 18px;
+    font-weight: 500px;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: var(--orange-color);
+    text-decoration: underline;
+    text-underline-offset: 52px;
+
+}
+
+/* button */
+.header-btn button {
+    background-color: black;
+    color: white;
+    width: 13vw;
+    height: 8vh;
+    border-radius: 40px;
+    border-style: none;
+    padding: 10px 0px;
+    font-size: 19px;
+}
+
+button .buttons:hover {
+    background-color: var(--orange-color);
+}
+
+@media(max-width:448px) {
+    .nav-section {
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+
+    .nav-links li a {
+        /* font-size: 6px; */
+        display: none;
+    }
+
+    .header-btn button {
+        font-size: 16px;
+    }
+}
+
+
+/* hero image */
+.hero-img-container {
+    margin-top: 20px;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    padding-left: 190px;
+    /* background-color: #d07d7d; */
+    /* border: 2px solid black; */
+    background-image: url(/img/services.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    h1 {
+        color: var(--white-color);
+        font-size: 3vw;
+    }
+}
+
+/* patient care main container */
+.patient-care-wrapper {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    gap: 38px;
+    padding: 20px 180px;
+    margin-top: 70px;
+
+    .patient-care {
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 29px;
+        text-align: justify;
+
+        h2 {
+            font-size: 40px;
+        }
+
+        p {
+            white-space: 20px;
+            line-height: 22px;
+        }
+    }
+
+    .patient-img {
+        flex-basis: 50%;
+
+        img {
+            width: 100%;
+            height: 50vh;
+            border-radius: 0px 55px 0px 55px;
+        }
+    }
+}
+
+.patient-care .buttons {
+
+    background-color: var(--black-color);
+    color: var(--white-color);
+    padding: 15px 30px;
+    width: 12vw;
+    font-size: 1.2vw;
+    font-weight: 50;
+    border-radius: 30px;
+    border-style: none;
+}
+
+/* home nursing wrapper */
+.home-nursing-wrapper {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    gap: 38px;
+    padding: 20px 180px;
+    margin-top: 70px;
+
+    .nursing {
+        flex-basis: 50%;
+
+        img {
+            width: 100%;
+            height: 50vh;
+            border-radius: 0px 55px 0px 55px;
+        }
+    }
+
+    .home-nursing-deails {
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 29px;
+        text-align: justify;
+
+        h2 {
+            font-size: 40px;
+        }
+
+        p {
+            white-space: 20px;
+            line-height: 22px;
+        }
+    }
+
+    .home-nursing-deails .buttons {
+        background-color: var(--black-color);
+        color: var(--white-color);
+        padding: 15px 30px;
+        width: 12vw;
+        font-size: 1.2vw;
+        font-weight: 50;
+        border-radius: 30px;
+        border-style: none;
+    }
+}
+
+
+/* Physiotherapy main container */
+.Physiotherapy-care-wrapper {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 38px;
+    padding: 20px 180px;
+    margin-top: 70px;
+
+    .Physiotherapy {
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 29px;
+        text-align: justify;
+
+        h2 {
+            font-size: 40px;
+        }
+
+        p {
+            white-space: 20px;
+            line-height: 22px;
+        }
+    }
+
+    .Physiotherapy-img {
+        flex-basis: 50%;
+
+        img {
+            width: 100%;
+            height: 50vh;
+            border-radius: 0px 55px 0px 55px;
+        }
+    }
+}
+
+.Physiotherapy .buttons {
+
+    background-color: var(--black-color);
+    color: var(--white-color);
+    padding: 15px 30px;
+    width: 12vw;
+    font-size: 1.2vw;
+    font-weight: 50;
+    border-radius: 30px;
+    border-style: none;
+}
+
+/* elderly main container */
+.elderly-wrapper {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    gap: 38px;
+    padding: 20px 180px;
+    margin-top: 70px;
+
+    .elderly-image-container {
+        flex-basis: 50%;
+
+        img {
+            width: 100%;
+            height: 50vh;
+            border-radius: 0px 55px 0px 55px;
+        }
+    }
+
+    .elderly-details {
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 29px;
+        text-align: justify;
+
+        h2 {
+            font-size: 40px;
+        }
+
+        p {
+            white-space: 20px;
+            line-height: 22px;
+        }
+    }
+
+    .elderly-details .buttons {
+        background-color: var(--black-color);
+        color: var(--white-color);
+        padding: 15px 30px;
+        width: 12vw;
+        font-size: 1.2vw;
+        font-weight: 50;
+        border-radius: 30px;
+        border-style: none;
+    }
+}
+
+/* baby care container */
+.baby-care-wrapper {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    gap: 38px;
+    padding: 20px 180px;
+    margin-top: 70px;
+
+    .baby-intro {
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 29px;
+        text-align: justify;
+
+        h2 {
+            font-size: 40px;
+        }
+
+        p {
+            white-space: 20px;
+            line-height: 22px;
+        }
+    }
+
+    .baby-img-container {
+        flex-basis: 50%;
+
+        img {
+            width: 100%;
+            height: 50vh;
+            border-radius: 0px 55px 0px 55px;
+        }
+    }
+}
+
+.baby-intro .buttons {
+
+    background-color: var(--black-color);
+    color: var(--white-color);
+    padding: 15px 30px;
+    width: 12vw;
+    font-size: 1.2vw;
+    font-weight: 50;
+    border-radius: 30px;
+    border-style: none;
+}
+
+/* Injections main container */
+.injections-wrapper {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    gap: 38px;
+    padding: 20px 180px;
+    margin-top: 70px;
+
+    .injections-image-container {
+        flex-basis: 50%;
+
+        img {
+            width: 100%;
+            height: 50vh;
+            border-radius: 0px 55px 0px 55px;
+        }
+    }
+
+    .injections-details {
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 29px;
+        text-align: justify;
+
+        h2 {
+            font-size: 40px;
+        }
+
+        p {
+            white-space: 20px;
+            line-height: 22px;
+        }
+    }
+
+    .injections-details .buttons {
+        background-color: var(--black-color);
+        color: var(--white-color);
+        padding: 15px 30px;
+        width: 12vw;
+        font-size: 1.2vw;
+        font-weight: 50;
+        border-radius: 30px;
+        border-style: none;
+    }
+}
+
+/* ICU main container */
+.icu-wrapper {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    gap: 38px;
+    padding: 20px 180px;
+    margin-top: 70px;
+
+    .icu-intro {
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 29px;
+        text-align: justify;
+
+        h2 {
+            font-size: 40px;
+        }
+
+        p {
+            white-space: 20px;
+            line-height: 22px;
+        }
+    }
+
+    .icu-img-container {
+        flex-basis: 50%;
+
+        img {
+            width: 100%;
+            height: 50vh;
+            border-radius: 0px 55px 0px 55px;
+        }
+    }
+}
+
+.icu-intro .buttons {
+
+    background-color: var(--black-color);
+    color: var(--white-color);
+    padding: 15px 30px;
+    width: 12vw;
+    font-size: 1.2vw;
+    font-weight: 50;
+    border-radius: 30px;
+    border-style: none;
+}
+
+/*medical equipments container */
+.equipments-wrapper {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    gap: 38px;
+    padding: 20px 180px;
+    margin-top: 70px;
+
+    .equipments-image-container {
+        flex-basis: 50%;
+
+        img {
+            width: 100%;
+            height: 50vh;
+            border-radius: 0px 55px 0px 55px;
+        }
+    }
+
+    .equipment-details {
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 29px;
+        text-align: justify;
+
+        h2 {
+            font-size: 40px;
+        }
+
+        p {
+            white-space: 20px;
+            line-height: 22px;
+        }
+    }
+
+    .equipment-details .buttons {
+        background-color: var(--black-color);
+        color: var(--white-color);
+        padding: 15px 30px;
+        width: 12vw;
+        font-size: 1.2vw;
+        font-weight: 50;
+        border-radius: 30px;
+        border-style: none;
+    }
+}
+
+.buttons i {
+    font-size: 12px;
+    padding: 10px;
+}
+
+/* footer */
+
+footer {
+    margin-top: 50px;
+    width: 100%;
+    height: 80vh;
+    color: var(--white-color);
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0px 170px;
+    gap: 42px;
+
+    .footer-item-1 {
+        width: 20vw;
+        border: 2px solid white;
+        /* background-color: #fff; */
+
+    }
+
+    .footer-conatiner {
+        border: 2px solid white;
+    }
+
+    .box-1 {
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+        /* align-items: center; */
+        justify-content: flex-start;
+        padding: 50px 10px;
+        width: 25%;
+
+        /* border:2px solid white; */
+        img {
+            width: 250px;
+            height: auto;
+        }
+    }
+
+    .icons-container i {
+        border: 1px solid white;
+        padding: 7px 9px;
+        border-radius: 50%;
+    }
+
+    h3 {
+        font-size: 19px;
+        font-weight: 600;
+        padding-bottom: 20px;
+    }
+}
+
+.box-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 50px 10px;
+
+}
+
+.box-2 ul li {
+    list-style: none;
+    line-height: 55px;
+
+    a {
+        text-decoration: none;
+        color: var(--white-color);
+    }
+}
+
+.footer-icon {
+    display: flex;
+    flex-direction: column;
+}
+
+.box-1 .box-1-child {
+    display: flex;
+    gap: 10px;
+
+    /* flex-direction: row; */
+    i {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+}
+
+.hr-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    margin-bottom: 120px;
+    /* width: 500px; */
+
+    hr {
+        border: 0;
+        height: 1px;
+        background-color: var(--orange-color);
+        width: 75vw;
+
+    }
+}
+.buttons{
+    i{
+        font-size: 16px;
+    }
+}
